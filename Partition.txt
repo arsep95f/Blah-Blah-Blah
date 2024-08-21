@@ -1,0 +1,49 @@
+Microsoft Windows [Version 10.0.22631.3007]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Admin>Diskpart
+
+Microsoft DiskPart version 10.0.22621.1
+
+Copyright (C) Microsoft Corporation.
+On computer: ARSEP95F
+
+DISKPART> list disk
+
+  Disk ###  Status         Size     Free     Dyn  Gpt
+  --------  -------------  -------  -------  ---  ---
+  Disk 0    Online          476 GB  2048 KB        *
+  Disk 1    Online           58 GB      0 B        *
+
+DISKPART> select disk 1
+
+Disk 1 is now the selected disk.
+
+DISKPART> clean
+
+DiskPart succeeded in cleaning the disk.
+
+DISKPART> create partition primary
+
+DiskPart succeeded in creating the specified partition.
+
+DISKPART> select partition 1
+
+Partition 1 is now the selected partition.
+
+DISKPART> format fs=ntfs quick
+
+  100 percent completed
+
+DiskPart successfully formatted the volume.
+
+DISKPART> active
+
+The selected disk is not a fixed MBR disk.
+The ACTIVE command can only be used on fixed MBR disks.
+
+DISKPART> assign letter=S
+
+DiskPart successfully assigned the drive letter or mount point.
+
+
